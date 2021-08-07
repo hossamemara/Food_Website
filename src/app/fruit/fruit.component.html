@@ -1,0 +1,15 @@
+<ngx-spinner bdColor = "#08090A" size = "medium" color = "#DEE0DD" type = "ball-newton-cradle" [fullScreen] = "true"></ngx-spinner>
+    <div class="row my-5 ">
+        <div class="col-lg-3 col-md-4 col-sm-6 my-2" *ngFor="let i of fruit">
+            <div class="meal">
+                <div class="mb-3">
+                    
+                    <img [src]="i.image_url" routerLink="/details/{{i.recipe_id}}" height="250px" class="w-100">
+
+                </div>
+                
+                <p class="my-3"><a class="text-white" routerLink="/details/{{i.recipe_id}}">{{i.title}}</a></p> 
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg fixed-top mb-5">
+    <div class="container-fluid">
+        <a class="navbar-brand nav-ulrs" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x text-white"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a *ngIf="isLogged" class="nav-link nav-ulrs" routerLink="home" routerLinkActive='active-component'>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="isLogged" class="nav-link nav-ulrs" routerLink="pizza" routerLinkActive='active-component'>Pizza</a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="isLogged" class="nav-link nav-ulrs" routerLink="pasta" routerLinkActive='active-component'>Pasta</a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="isLogged" class="nav-link nav-ulrs" routerLink="corn" routerLinkActive='active-component'>Corn</a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="isLogged" class="nav-link nav-ulrs" routerLink="fruit" routerLinkActive='active-component'>Passion Fruit</a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="isLogged" class="nav-link nav-ulrs" routerLink="pepper" routerLinkActive='active-component'>Green Pepper</a>
+                </li>
+                <li class="nav-item nav-ulrs">
+                    <a *ngIf="!isLogged" class="nav-link" routerLink="login" routerLinkActive='active-component'>Log
+                        In</a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="!isLogged" class="nav-link nav-ulrs" routerLink="register"
+                        routerLinkActive='active-component'>Register</a>
+                </li>
+
+                <li class="nav-item">
+                    <a *ngIf="isLogged" class="nav-link nav-ulrs"><i>{{firstName}} {{lastName}}</i></a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="isLogged" class="nav-link" (click)='logOut()'><i class="text-danger fas fa-sign-out-alt"></i>
+
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+</nav>

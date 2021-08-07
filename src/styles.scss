@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import '_width.scss';
+@import '_bgColors.scss';
+@import '_fonts.scss';
+@import '~ngx-toastr/toastr';
+
+.navbar
+{
+    background-color: rgba(17, 3, 3, 0.7);
+    a {
+     color:whitesmoke   
+    }
+
+}
+.active-component
+{
+    border-bottom: gold solid 2px;
+    transition: 0.1s all ease-in;
+}
+.active-component-sidebar
+{
+    
+    border: orange 1px solid;
+  
+}
+.site-cover
+{
+    background-image: url('assets/Images/full-2-800x640.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.2;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+body
+{
+    background-color: rgba(5, 0, 0, 0.9);
+z-index: 1;
+ 
+    i{
+        cursor:pointer
+    }
+    img {
+        cursor: pointer;
+    }
+}
+
+form
+{
+    width: 60%;
+    margin: auto;
+    .form-group{
+        label
+        {
+            color: white;
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+
+    form
+    {
+        width:95%
+    }
+
+  
+  }
